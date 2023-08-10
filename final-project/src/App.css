@@ -1,0 +1,334 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .container {
+    max-width: 1200px;
+    height: 2500px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: rgb(252, 150, 143);
+    overflow-x: scroll;
+  }
+
+  .header {
+    text-align: center;
+    padding: 20px 0;
+    font-size: 24px;
+    color: #333;
+  }
+  
+  .filter-container {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  
+  .filter-container select,
+  .filter-container button {
+    padding: 8px 12px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: #fff;
+    cursor: pointer;
+  }
+  
+  .filter-container button {
+    margin-left: 10px;
+  }
+
+  .modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .modal-content {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    max-width: 400px;
+  }
+  
+  .modal-close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: none;
+    border: none;
+    font-size: 16px;
+    color: #000000;
+    cursor: pointer;
+  }
+  
+  .modal-close:hover {
+    color: #333;
+  }
+  
+/* Favorites.css */
+
+.favorites-container-wrapper {
+  background-color: rgb(252, 150, 143);
+  max-height: 1125px; 
+  overflow-y: scroll; 
+  margin-top: 50px;
+  width: 800px;
+  margin-left: 880px;
+}
+
+.favorites-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.favorites-header {
+  width: 100%;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.favorites-header h2 {
+  font-size: 34px;
+  color: #333;
+}
+
+.favorite-item {
+  background-color: rgb(252, 150, 143);
+  width: 100%; 
+  margin-bottom: 20px; 
+  width: 250px; 
+  margin: 10px;
+  padding: 10px;
+  text-align: center;
+  display: flex;
+  flex-direction: column; 
+  align-items: center; 
+}
+
+.favorite-item img {
+  width: 325px; 
+  height: 520px; 
+  object-fit: cover;
+  border-radius: 4px;
+  margin-bottom: 10px;
+}
+
+.favorite-item h3 {
+  font-size: 40px;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.favorite-item button {
+  padding: 8px 12px;
+  font-size: 34px;
+  color: #fff;
+  background-color: #007bff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.favorite-item button:hover {
+  background-color: #0056b3;
+}
+
+/* Media query for smaller screens */
+@media (max-width: 600px) {
+  .favorites-container {
+    padding: 10px;
+  }
+
+  .favorite-item {
+    width: 150px;
+  }
+
+  .favorite-item img {
+    width: 80px;
+    height: 120px;
+  }
+
+  .favorites-header h2 {
+    font-size: 24px;
+  }
+
+  .favorite-item h3 {
+    font-size: 26px;
+  }
+
+  .favorite-item button {
+    font-size: 24px;
+  }
+}
+
+  
+  .favorite-item h3 {
+    margin: 0;
+  }
+  
+  .favorite-item button {
+    background: none;
+    border: none;
+    font-size: 16px;
+    color: #ff4500;
+    cursor: pointer;
+  }
+  
+  .favorite-item button:hover {
+    text-decoration: underline;
+  }
+
+  .navbar-brand {
+    color: black;
+    font-size: 50px;
+    margin-left: 900px;
+    
+  }
+
+  .navbar {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px 20px;
+  }
+  
+  .navbar-title {
+    font-size: 54px;
+    font-family: 'Amatic SC';
+    font-weight: 600;
+    margin-bottom: 10px;
+  }
+  
+  .navbar-links {
+    display: flex;
+  }
+  
+  .navbar-link {
+    margin-right: 10px;
+    color: black;
+    text-decoration: none;
+    font-family: 'Amatic SC';
+    font-size: 24px;
+    font-weight: 800;
+    padding-left: 45px;
+  }
+  
+  .navbar-link:last-child {
+    margin-right: 0;
+  }
+  
+  .navbar-link:hover {
+    text-decoration: underline;
+  }
+
+  .book-list {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  .book-item {
+    flex: 0 0 calc(25% - 10px);
+    margin: 5px;
+    border: 1px solid #ccc;
+    padding: 10px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .book-title {
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  
+  .book-image {
+    width: 325px; 
+    height: 520px; 
+    object-fit: cover;
+    margin-bottom: 10px;
+  }
+  
+  .book-links {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+  }
+
+  .bookButtons {
+    margin-top: 10px;
+  }
+  
+  /* BookClubSignup.css */
+.form-container {
+  max-width: 400px;
+  height: 450px;
+  margin: 0 auto;
+  margin-top: 200px;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.form-header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.input {
+  width: 94%;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-top: 20px;
+  padding-bottom: 10px;
+
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.btn {
+  background-color: #007bff;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background-color: #0056b3;
+}
+
+.messages {
+  margin-bottom: 20px;
+}
+
+.success {
+  color: green;
+}
+
+.error {
+  color: red;
+}
